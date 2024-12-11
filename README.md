@@ -48,7 +48,7 @@ In this demo, we will run a digit recognition task in batch mode.
    - Specify your email in [digit_recognition_job.sh](slurm_jobs/digit_recognition_job.sh), if you want to receive notifications.
 2. Use `sbatch` command to submit the job.
    ```bash
-   cd ~/~/ie_cuhk_slurm_demo/slurm_jobs
+   cd ~/ie_cuhk_slurm_demo/slurm_jobs
    
    sbatch digit_recognition_job.sh
    ```
