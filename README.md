@@ -2,30 +2,28 @@
 
 This demo gives a few examples to use CUHK IE GPU resources via [slurm](https://slurm.schedmd.com/quickstart.html) commands. 
 
-Please refer to IE wiki page for detailed introductions on IE GPU clusters. 
+Please refer to the IE wiki page for detailed introductions on IE GPU clusters. 
 
+## Install conda and setup environments
+1. Follow the IE wiki to install anaconda.
+   
+   *Note: If the installation gets stuck, you could try to ssh to a different node and retry.*
 
-## Install conda
-Please follow the IE wiki to install anaconda.
-
-*Note: If the installation gets stuck, you could try to ssh to a different node and retry.*
-
-## Setup conda environment 
-1. Create a new environment named "demo_env"
+3. Create a new environment named "demo_env"
 ```bash
 conda create --name demo_env
 ```
-2. Activate the new environment
+3. Activate the new environment
 ```bash
 conda activate demo_env
 ```
-3. Install the [torchvision](https://anaconda.org/pytorch/torchvision) package
+4. Install the [torchvision](https://anaconda.org/pytorch/torchvision) package
 ```bash
 conda install pytorch::torchvision
 ```
 
 ## Try out slurm commands
-### System info
+### Check system / job states
 - Use `slurm info` command to get the state of partitions.
 - Use `slurm queue` command to get the state of jobs.
 
@@ -53,5 +51,3 @@ In this demo, we will run a digit recognition task in batch mode.
    ```
 3. Use `squeue` command to check job states.
 4. Get outputs from the `.log` file when the job finishes.  
-
-
