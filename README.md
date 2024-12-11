@@ -7,7 +7,7 @@ Please refer to the IE wiki page for detailed introductions on IE GPU clusters.
 ## Install conda and setup environments
 1. Follow the IE wiki to install anaconda.
    
-   *Note: If the installation gets stuck, you could try to ssh to a different node and retry.*
+   *Note: If the installation gets stuck, you could ssh to a different node and retry.*
 
 3. Create a new environment named "demo_env"
 ```bash
@@ -23,14 +23,14 @@ conda install pytorch::torchvision
 ```
 
 ## Try out slurm commands
-### Check system / job states
+### System / job states
 - Use `slurm info` command to get the state of partitions.
 - Use `slurm queue` command to get the state of jobs.
 
 ### Interactive mode for debug and test
 The interactive mode allows you to debug and test your code efficiently.
 We will use the random num genration demo to show how to run code in this mode. 
-1. First, run the command `srun --pty /bin/bash/` and the system will allocate a node for you if there are available resources.
+1. Run the command `srun --pty /bin/bash/` and the system will allocate a node for you if there are available resources.
 2. [generate_num.py](random_num_generation/generate_num.py) is a python file to generate a random number. You could test it using the following command.  
 ```bash
 cd ~/ie_cuhk_slurm_demo/random_num_generation
