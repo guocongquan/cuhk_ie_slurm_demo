@@ -31,7 +31,7 @@ conda install pytorch::torchvision
 The interactive mode allows you to debug and test your code efficiently.
 We will use the random num genration demo to show how to run code in this mode. 
 1. First, run the command `srun --pty /bin/bash/` and the system will allocate a node for you if there are available resources.
-2. [random_num_generation/generate_num.py](https://github.com/guocongquan/cuhk_ie_slurm_demo/blob/main/random_num_generation/generate_num.py) is a python file to generate a random number. You could test it using the following command.  
+2. [generate_num.py](random_num_generation/generate_num.py) is a python file to generate a random number. You could test it using the following command.  
 ```bash
 cd ~/ie_cuhk_slurm_demo/random_num_generation
 python random_num_generation.py
