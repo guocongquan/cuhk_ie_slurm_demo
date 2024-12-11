@@ -42,9 +42,9 @@ python random_num_generation.py
 ### Batch mode - single job
 After debugging and testing your code, you could submit your job in batch mode use the `sbatch` command.
 In this demo, we will run a digit recognition task in batch mode. 
-1. To run your code in a batch mode, you need to write a script such as [slurm_jobs/digit_recognition_job.sh](https://github.com/guocongquan/cuhk_ie_slurm_demo/blob/main/slurm_jobs/digit_recognition_job.sh).
+1. To run your code in a batch mode, you need to write a script such as [digit_recognition_job.sh](slurm_jobs/digit_recognition_job.sh).
    - The script file specifies a few paramters for the job, including the email account to receive notifications, the type and the amount of GPUs.
-   - Specify your email in [slurm_jobs/digit_recognition_job.sh](https://github.com/guocongquan/cuhk_ie_slurm_demo/blob/main/slurm_jobs/digit_recognition_job.sh), if you want to receive notifications.
+   - Specify your email in [digit_recognition_job.sh](slurm_jobs/digit_recognition_job.sh), if you want to receive notifications.
 2. Use `sbatch` command to submit the job.
    ```bash
    sbatch ~/ie_cuhk_slurm_demo/slurm_jobs/digit_recognition_job.sh
@@ -54,7 +54,7 @@ In this demo, we will run a digit recognition task in batch mode.
 
 ### Batch mode - array job
 A collection of similar but indepedent jobs could be submitted using `sbatch`. We will use the random num generation demo to illustrate this.
-1. [slurm_jobs/random_num_generation_job.sh](https://github.com/guocongquan/cuhk_ie_slurm_demo/blob/main/slurm_jobs/random_num_generation_job.sh) is the job script, where we use `#BATCH --array=1-5` to start an array of 5 jobs with index 1 to 5.
+1. [random_num_generation_job.sh](slurm_jobs/random_num_generation_job.sh) is the job script, where we use `#BATCH --array=1-5` to start an array of 5 jobs with index 1 to 5.
 2. Submit the job through `sbatch` command.
    ```bash
    sbatch ~/ie_cuhk_slurm_demo/slurm_jobs/random_num_generation_job.sh
