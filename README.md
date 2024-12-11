@@ -10,17 +10,17 @@ Please refer to the IE wiki page for detailed introductions on IE GPU clusters.
    *Note: If the installation gets stuck, you could ssh to a different node and retry.*
 
 3. Create a new environment named "demo_env"
-```bash
-conda create --name demo_env
-```
+   ```bash
+   conda create --name demo_env
+   ```
 3. Activate the new environment
-```bash
-conda activate demo_env
-```
+   ```bash
+   conda activate demo_env
+   ```
 4. Install the [torchvision](https://anaconda.org/pytorch/torchvision) package
-```bash
-conda install pytorch::torchvision
-```
+   ```bash
+   conda install pytorch::torchvision
+   ```
 
 ## Try out slurm commands
 ### System / job states
@@ -32,10 +32,11 @@ The interactive mode allows you to debug and test your code efficiently.
 We will use the random num genration demo to show how to run code in this mode. 
 1. Run the command `srun --pty /bin/bash/` and the system will allocate a node for you if there are available resources.
 2. [generate_num.py](random_num_generation/generate_num.py) is a python file to generate a random number. You could test it using the following command.  
-```bash
-cd ~/ie_cuhk_slurm_demo/random_num_generation
-python random_num_generation.py
-```
+   ```bash
+   cd ~/ie_cuhk_slurm_demo/random_num_generation
+   
+   python random_num_generation.py
+   ```
 3. You could modify this python file and write your own code. Debug and test it.
 4. Run `exit` to exit the interative mode and get back to the controller node. 
 
@@ -47,8 +48,11 @@ In this demo, we will run a digit recognition task in batch mode.
    - Specify your email in [digit_recognition_job.sh](slurm_jobs/digit_recognition_job.sh), if you want to receive notifications.
 2. Use `sbatch` command to submit the job.
    ```bash
-   sbatch ~/ie_cuhk_slurm_demo/slurm_jobs/digit_recognition_job.sh
+   cd ~/~/ie_cuhk_slurm_demo/slurm_jobs
+   
+   sbatch digit_recognition_job.sh
    ```
+   (Run `chmod +x digit_recognition_job.sh` to make it executable, if needed)
 3. Use `squeue` command to check job states.
 4. Get outputs from the `.log` file when the job finishes.  
 
