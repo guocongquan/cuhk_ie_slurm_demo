@@ -39,7 +39,7 @@ python random_num_generation.py
 3. You could modify this python file and write your own code. Debug and test it.
 4. Run `exit` to exit the interative mode and get back to the controller node. 
 
-### Batch mode 
+### Batch mode - single job
 After debugging and testing your code, you could submit your job in batch mode use the `sbatch` command.
 In this demo, we will run a digit recognition task in batch mode. 
 1. To run your code in a batch mode, you need to write a script such as [slurm_jobs/digit_recognition_job.sh](https://github.com/guocongquan/cuhk_ie_slurm_demo/blob/main/slurm_jobs/digit_recognition_job.sh).
@@ -51,3 +51,13 @@ In this demo, we will run a digit recognition task in batch mode.
    ```
 3. Use `squeue` command to check job states.
 4. Get outputs from the `.log` file when the job finishes.  
+
+### Batch mode - array job
+A collection of similar but indepedent jobs could be submitted using `sbatch`. We will use the random num generation demo to illustrate this.
+1. [slurm_jobs/random_num_generation_job.sh](https://github.com/guocongquan/cuhk_ie_slurm_demo/blob/main/slurm_jobs/random_num_generation_job.sh) is the job script, where we use `#BATCH --array=1-5` to start an array of 5 jobs with index 1 to 5.
+2. Submit the job through `sbatch` command.
+   ```bash
+   sbatch ~/ie_cuhk_slurm_demo/slurm_jobs/random_num_generation_job.sh
+   ```
+3. Use `squeue` to check job states. You should see 5 jobs running in parallel.
+   
