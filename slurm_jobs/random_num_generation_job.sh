@@ -6,7 +6,7 @@
 #SBATCH --output=slurm_job_%j.log               # Standard output and error log
 #SBATCH --gres=gpu:1                            # instance of GPU resource required, 1 in most case
 
-conda shell.bash hook
+eval "$(conda shell.bash hook)"
 conda activate demo_env
 
 cd ~/cuhk_ie_slurm_demo/random_num_generation
