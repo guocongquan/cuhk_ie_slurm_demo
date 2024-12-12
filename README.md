@@ -1,6 +1,6 @@
-# CUHK IE Slurm Demo
+# Using CUHK IE GPU Cluster via Slurm
 
-This demo gives a few examples to use CUHK IE GPU resources via [slurm](https://slurm.schedmd.com/quickstart.html) commands. 
+We provide a few examples to use CUHK IE GPU resources via [slurm](https://slurm.schedmd.com/quickstart.html) commands. 
 
 Please refer to the IE wiki page for detailed introductions on IE GPU clusters. 
 
