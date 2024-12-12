@@ -37,7 +37,7 @@ We will use the random num genration demo to show how to run code in this mode.
    
    python random_num_generation.py
    ```
-3. You could modify this python file and write your own code. Debug and test it.
+3. Do you see any bugs? Fix it and test the code. 
 4. Run `exit` to exit the interative mode and get back to the controller node. 
 
 ### Batch mode - single job
