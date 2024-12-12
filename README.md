@@ -58,7 +58,7 @@ In this demo, we will run a digit recognition task in batch mode.
 
 ### Batch mode - array job
 A collection of similar but indepedent jobs could be submitted using `sbatch`. We will use the random num generation demo to illustrate this.
-1. [random_num_generation_job.sh](slurm_jobs/random_num_generation_job.sh) is the job script, where we use `#BATCH --array=1-5` to start an array of 5 jobs with index 1 to 5.
+1. [random_num_generation_job.sh](slurm_jobs/random_num_generation_job.sh) is the job script, where we use `#SBATCH --array=1-5` to start an array of 5 jobs with index 1 to 5.
 2. Submit the job through `sbatch` command.
    ```bash
    sbatch ~/ie_cuhk_slurm_demo/slurm_jobs/random_num_generation_job.sh
