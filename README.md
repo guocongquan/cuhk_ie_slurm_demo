@@ -22,7 +22,7 @@ Please refer to the IE wiki page for detailed introductions on IE GPU clusters.
    conda install pytorch::torchvision
    ```
 
-## Try out slurm commands
+## Try out slurm commands by yourself
 ### System / job states
 - Use `slurm info` command to get the state of partitions.
 - Use `slurm queue` command to get the state of jobs.
@@ -64,4 +64,8 @@ A collection of similar but indepedent jobs could be submitted using `sbatch`. W
    sbatch ~/ie_cuhk_slurm_demo/slurm_jobs/random_num_generation_job.sh
    ```
 3. Use `squeue` to check job states. You should see 5 jobs running in parallel.
-   
+
+
+## Other resources
+- Connect to GPU clusters using VS Code [[link](https://code.visualstudio.com/docs/remote/ssh)]
+- YouTube video: Three ways to use slurm on a high performance computer [[link](https://youtu.be/51SyuTBk72k)]
