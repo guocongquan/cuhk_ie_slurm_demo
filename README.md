@@ -24,8 +24,8 @@ Please refer to the IE wiki page for detailed introductions on IE GPU clusters.
 
 ## Try out slurm commands by yourself
 ### System / job states
-- Use `slurm info` command to get the state of partitions.
-- Use `slurm queue` command to get the state of jobs.
+- Use `sinfo` command to get the state of partitions.
+- Use `squeue` command to get the state of jobs.
 
 ### Interactive mode for debug and test
 The interactive mode allows you to debug and test your code efficiently.
