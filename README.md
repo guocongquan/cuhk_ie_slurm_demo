@@ -30,7 +30,7 @@ Please refer to the IE wiki page for detailed introductions on IE GPU clusters.
 ### Interactive mode for debug and test
 The interactive mode allows you to debug and test your code efficiently.
 We will use the random num genration demo to show how to run code in this mode. 
-1. Run the command `srun --pty /bin/bash/` and the system will allocate a node for you if there are available resources.
+1. Run the command `srun --pty /bin/bash` and the system will allocate a node for you if there are available resources.
 2. [generate_num.py](random_num_generation/generate_num.py) is a python file to generate a random number. You could test it using the following command.  
    ```bash
    cd ~/ie_cuhk_slurm_demo/random_num_generation
